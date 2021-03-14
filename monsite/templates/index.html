@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static%}
+    <!link rel = "stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    <!link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <h1>
+        <a> Template de mon Site </a>
+    </h1>
+<div>
+    Bienvenu {{nom}}:
+{% if Age < 18 %}
+    {{Age}} ans tu es mineur .
+{% else %}
+    {{Age}} ans tu es majeur .
+{% endif%}
+<br/>
+</div>
+
+le matériel info :
+{% for el in materielinfo%}
+    {% if 'm' in el%}
+        {{el}}
+    {% endif %}
+
+{% endfor %}
+</body>
+</html>
