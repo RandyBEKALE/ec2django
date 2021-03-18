@@ -10,7 +10,9 @@ def index(request):
     #dans un dictionnaire
 
     data = {"name": "Randy BEKALE", "Age": 31, "materielinfo": ["mac", "pc", 'imprimant'],
-            "skill": "Ingénieur Vision par Ordinateur - Consultant DevOps - Développeur Python",}
+            "skill": "Ingénieur Vision par Ordinateur - Consultant DevOps - Développeur Python",
+            "adress":"146 Route de Versailles",
+            "city":"91160 Champlan",}
 
     return HttpResponse(template.render(data))
 
